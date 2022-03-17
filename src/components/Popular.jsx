@@ -1,5 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from "react"
 import styled from 'styled-components'
+import {Splide, SplideSlide} from '@splidejs/react-splide'
+import '@splidejs/splide/dist/css/splide.min.css'
 
 function Popular() {
 
@@ -45,6 +47,12 @@ margin: 4rem 0rem
 const Card = styled.div`
 min-height: 25rem;
 border-radius: 2rem;
+overflow: hidden;
+
+img {
+    border-radius: 2rem;
+}
+
 `
 
 
