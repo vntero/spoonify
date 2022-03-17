@@ -23,7 +23,14 @@ const getPopular = async () => {
     <div>
                 <Wrapper>
                     <h3>Popular Picks</h3>
-                    <Splide>
+
+                    <Splide options={{
+                        perPage: 4,
+                        arrows: false,
+                        pagination: false,
+                        drag: 'free',
+                        gap: '5rem'
+                    }}>
                     {popular.map((recipe) => {
                         return(
                             <SplideSlide>
@@ -41,7 +48,7 @@ const getPopular = async () => {
 }
 
 const Wrapper = styled.div`
-margin: 4rem 0rem
+margin: 4rem 0rem;
 `
 
 const Card = styled.div`
@@ -52,7 +59,6 @@ overflow: hidden;
 img {
     border-radius: 2rem;
 }
-
 `
 
 
