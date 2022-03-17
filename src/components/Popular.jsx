@@ -21,21 +21,21 @@ const getPopular = async () => {
 
   return (
     <div>
-        {popular.map((recipe) => {
-            return (
                 <Wrapper>
                     <h3>Popular Picks</h3>
+                    <Splide>
                     {popular.map((recipe) => {
                         return(
-                            <Card>
-                                <p>{recipe.title}</p>
-                                <img src={recipe.image} alt={recipe.title} />
-                            </Card>
+                            <SplideSlide>
+                                <Card>
+                                    <p>{recipe.title}</p>
+                                    <img src={recipe.image} alt={recipe.title} />
+                                </Card>
+                            </SplideSlide>
                         )
                     })}
+                    </Splide>
                 </Wrapper>
-            )
-        })}
     </div>
   )
 }
